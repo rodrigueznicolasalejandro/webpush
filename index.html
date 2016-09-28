@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Realtime Chrome Push Notifications example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- THESE ARE THE REQUIRED FILES TO USE CHROME PUSH NOTIFICATIONS -->
+  <link rel="manifest" href="manifest.json">
+  <script src="ChromePushManager.js"></script>  
+  <script src="ortc-2.1.0.js"></script>
+  
+  <!-- THESE FILES ARE ONLY REQUIRED FOR THE CURRENT EXAMPLE -->
+  <script src="jquery-3.1.1.min.js"></script>  
+  <script src="index.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+        <p>
+          Your channel is: <code><span id="channel">...</span></code>
+        </p>
+        <p>
+            This was performed through the new <code>subscribeWithNotifications</code> method in the Realtime JavaScript SDK.
+        </p>
+        <p>
+          <button id="sendButton" class="button-primary" onclick="javascript:send();">Send me a push notification</button>
+        </p>
+        <p>
+          <img src="img/push-notification.png" style="max-width: 90%; border: solid lightgray 1px;">
+        </p>
+    </div>
+  </div>
+</body>
+</html>
